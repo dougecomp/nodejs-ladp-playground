@@ -1,0 +1,44 @@
+{
+  "name": "nodejs-ladp-playground",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "cross-env yarn mocha -r ts-node/register -r tsconfig-paths/register --parallel --exit --recursive tests/**/*.spec.ts",
+    "test:dev": "cross-env yarn mocha --inspect=0.0.0.0:9229 -r ts-node/register -r tsconfig-paths/register --recursive tests/**/*.spec.ts -w --watch-files src,tests --watch-ignore node_modules",
+    "test:coverage": "yarn nyc --reporters=html,text yarn test"
+  },
+  "dependencies": {
+    "dotenv-safe": "^8.2.0",
+    "ldapjs": "^2.2.4",
+    "ldapjs-promise": "^1.0.5",
+    "ldapts": "^2.12.0",
+    "promised-ldap": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/faker": "^5.5.5",
+    "@types/ldapjs": "^1.0.10",
+    "@types/mocha": "^8.2.2",
+    "@types/promised-ldap": "^0.3.0",
+    "@types/sinon": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "faker": "^5.5.3",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}
